@@ -29,7 +29,7 @@ switch day {
 
 ### 조건문 비교
 - Switch문의 동작응 if문 처럼 true가 되는 조건문으로 검사할 수 있음
-- [예제 코드](./switch_like_if.go)
+- [예제 코드](./switch_like_if/main.go)
 
 ### switch 초기문
 ```Go

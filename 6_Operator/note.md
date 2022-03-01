@@ -39,11 +39,11 @@
   - 정수 오버플로우
     - 정수가 정수 타입의 범위를 벗어난 경우 값이 비정상으로 변화하는 현상
     - 따라서, x가 정수 타입일 경우 `x < x+1`을 항상 만족(true)하지 못함.
-    - [Over-Under flow 예제 코드](integer_flow.go)
+    - [Over-Under flow 예제 코드](integer_flow/main.go)
   - float 비교 연산
     - 실수 끼리 `==` 연산에서 예기치 않는 경우가 있음
     - float64 표현 방식으로 생긴 오차
-    - [실수 == 예제코드](float_equal_unexpected.go)
+    - [실수 == 예제코드](float_equal_unexpected/main.go)
 
 ### 실수 오차
 - 컴퓨터의 지수부와 소수부는 10진수 기준이 아닌 *2진수*의 기준으로 되어있음.
@@ -55,15 +55,15 @@
 - 따라서 최대한 가깝게 표현한 값 0.3759999...로 표현
 - `0.1 + 0.2 == 0.3`이 `false`인 이유가 있음.
 - 문제를 해결하는 방법
-  - [작은 오차 무시하기](dismiss_small.go)
-  - 더 나은 방법 : [1비트 차이만큼 비교](nextafter.go)
+  - [작은 오차 무시하기](dismiss_small/main.go)
+  - 더 나은 방법 : [1비트 차이만큼 비교](nextafter/main.go)
     - math 패키지의 `Nextafter()` 함수를 사용
       ```Go
       func Nextafter(x, y float64) (r float64)
       ```
       - float64 2개를 받아 float64 1개로 반환
       - x에서 y를 향해 1비트만 조정한 값을 반환
-  - [float 정확도 big 패키지](big.go)
+  - [float 정확도 big 패키지](big/main.go)
 
 ### 논리 연산자
 - 다른 언어랑 비슷
