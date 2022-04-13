@@ -1,13 +1,13 @@
-module main
+module interface
 
 go 1.17
 
 replace (
-    "main.com/fedex" => "./fedex"
-    "main.com/koreaPost" => "./koreaPost"
+    "interface.com/fedex" => "./fedex"
+    "interface.com/koreaPost" => "./koreaPost"
 )
 
 require (
-    "main.com/fedex" v0.0.0
-    "main.com/koreaPost" v0.0.0
+    "interface.com/fedex" v0.0.0
+    "interface.com/koreaPost" v0.0.0
 )
